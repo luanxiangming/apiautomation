@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Bussiness suite]">
+  <test name="TestInterface(failed)">
+    <classes>
+      <class name="com.vipabc.test.login.Login">
+        <methods>
+          <include name="login" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.vipabc.test.login.Login -->
+    </classes>
+  </test> <!-- TestInterface(failed) -->
+</suite> <!-- Failed suite [Bussiness suite] -->

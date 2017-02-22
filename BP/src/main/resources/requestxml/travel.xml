@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:reservationDto xmlns:ns2="http://www.jje.com/schema/travel">
+    <ns2:channel>CALL_CENTER</ns2:channel>
+    <ns2:contact>
+        <ns2:email>wang.steven@jinjiang.com</ns2:email>
+        <ns2:name>WangA</ns2:name>
+        <ns2:telephone>13661891634</ns2:telephone>
+    </ns2:contact>
+    <ns2:couponAmount>0</ns2:couponAmount>
+    <ns2:createTime>2013-03-21T14:54:54.125+08:00</ns2:createTime>
+    <ns2:creatorId>1-1</ns2:creatorId>
+    <ns2:creatorName>adminSte</ns2:creatorName>
+    <ns2:group>
+        <ns2:canOnlinePay>false</ns2:canOnlinePay>
+        <ns2:canReservation>false</ns2:canReservation>
+        <ns2:id>15415</ns2:id>
+        <ns2:signUp>false</ns2:signUp>
+    </ns2:group>
+
+    <ns2:guests>
+        <ns2:birthday>1969-10-12</ns2:birthday>
+        <ns2:cardType>J8 Benefit Card</ns2:cardType>
+        <ns2:certificationNumber>898865651</ns2:certificationNumber>
+        <ns2:certificationType>PASSPORT</ns2:certificationType>
+        <ns2:memberCardNo>66148888</ns2:memberCardNo>
+        <ns2:mobile>13900000000</ns2:mobile>
+        <ns2:name>游客101</ns2:name>
+        <ns2:sex>FEMALE</ns2:sex>
+    </ns2:guests>
+
+    <ns2:guests>
+        <ns2:birthday>1950-10-11</ns2:birthday>
+        <ns2:cardType>J2 Benefit Card</ns2:cardType>
+        <ns2:certificationNumber>4545673432</ns2:certificationNumber>
+        <ns2:certificationType>PASSPORT</ns2:certificationType>
+        <ns2:memberCardNo>664503333</ns2:memberCardNo>
+        <ns2:mobile>13000000000</ns2:mobile>
+        <ns2:name>游客102</ns2:name>
+        <ns2:sex>MALE</ns2:sex>
+    </ns2:guests>
+
+    <ns2:isCancelable>false</ns2:isCancelable>
+    <ns2:isOnLinePay>false</ns2:isOnLinePay>
+    <ns2:isOnlinePayable>false</ns2:isOnlinePayable>
+    <ns2:isPayable>false</ns2:isPayable>
+    <ns2:isScorePay>false</ns2:isScorePay>
+    <ns2:isSendSMS>false</ns2:isSendSMS>
+    <ns2:memberCouponDto>
+        <couponAmount>0</couponAmount>
+    </ns2:memberCouponDto>
+    <ns2:noteDto>
+        <createTime>2013-03-21T13:54:54.125+08:00</createTime>
+        <operation>CREATE</operation>
+        <ownerCategory>RESERVATION</ownerCategory>
+    </ns2:noteDto>
+    <ns2:owner>
+        <ns2:id>40009</ns2:id>
+        <ns2:mcMemberCode>10016</ns2:mcMemberCode>
+        <ns2:name>旺10</ns2:name>
+    </ns2:owner>
+    <ns2:receivables>
+        <ns2:copies>1</ns2:copies>
+        <ns2:discountAmount>0</ns2:discountAmount>
+        <ns2:price>
+            <ns2:id>32085</ns2:id>
+            <ns2:quoteMemo></ns2:quoteMemo>
+            <ns2:salePrice>10</ns2:salePrice>
+            <ns2:travelId></ns2:travelId>
+            <ns2:type></ns2:type>
+        </ns2:price>
+        <ns2:reservationPrice>10</ns2:reservationPrice>
+    </ns2:receivables>
+    <ns2:resNote>订单备注:啦啦啦！啦啦啦！</ns2:resNote>
+</ns2:reservationDto>

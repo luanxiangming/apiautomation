@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="4" name="Bussiness suite">
+	<parameter name ="testEnv" value="${testEnv}"/>
+	<test verbose="4" name="UserController">
+		<classes>
+			<class name="com.vipabc.test.BasicClass"></class>
+			<class name="com.vipabc.test.backend.userController.CollectionInfo"></class>
+			<class name="com.vipabc.test.backend.userController.GetUserExtension"></class>
+			<class name="com.vipabc.test.backend.userController.Logout"></class>
+			<class name="com.vipabc.test.backend.userController.SaveUserExtension"></class>
+			<class name="com.vipabc.test.backend.userController.SendReport"></class>
+			<class name="com.vipabc.test.backend.userController.ShowBaseInfo"></class>
+			<class name="com.vipabc.test.backend.userController.Tracking"></class>			
+			<class name="com.vipabc.test.backend.userController.UpdateBaseInfo"></class>	
+			<!--class name="com.vipabc.test.backend.userController.GetUserAvatars"></class> --> 
+		</classes>
+	</test>
+		<test verbose="4" name="SecurityController">
+		<classes>
+			<class name="com.vipabc.test.backend.securityController.CheckPassword"></class>
+<!--			<class name="com.vipabc.test.backend.securityController.CheckVerificationCode"></class>--> 
+			<class name="com.vipabc.test.backend.securityController.ExistPhone"></class>
+			<class name="com.vipabc.test.backend.securityController.Login"></class>
+			<class name="com.vipabc.test.backend.securityController.PhoneBinding"></class>
+			<class name="com.vipabc.test.backend.securityController.PhoneInitPassword"></class> 
+<!--			<class name="com.vipabc.test.backend.securityController.PhonePasswordResetThenLogin"></class>--> 
+<!--			<class name="com.vipabc.test.backend.securityController.PhoneRegister"></class>--> 
+<!--			<class name="com.vipabc.test.backend.securityController.PhoneVerifyCodeLogin"></class>--> 
+<!--			<class name="com.vipabc.test.backend.securityController.SendVerificationCode"></class>		--> 	
+		</classes>
+	</test>
+</suite> 

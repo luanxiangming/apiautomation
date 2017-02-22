@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:bookingHotelDto xmlns:ns2="http://www.jje.com/schema/hotel">
+    <ns2:adultNum>1</ns2:adultNum>
+    <ns2:checkin>2013-01-17T00:00:00+08:00</ns2:checkin>
+    <ns2:checkout>2013-01-18T00:00:00+08:00</ns2:checkout>
+    <ns2:contact>
+        <ns2:email>shiqiang.luo@jinjiang.com</ns2:email>
+        <ns2:mobile>13818390285</ns2:mobile>
+        <ns2:name>罗世强</ns2:name>
+        <ns2:phone></ns2:phone>
+    </ns2:contact>
+    <ns2:creditCard/>
+    <ns2:guests>罗世强</ns2:guests>
+    <ns2:jjOrderType>GUARANTEE</ns2:jjOrderType>
+    <ns2:member>
+        <ns2:cardNo>T00002068678</ns2:cardNo>
+        <ns2:cardType>J Benefit Card</ns2:cardType>
+        <ns2:mcMemberCode>10045</ns2:mcMemberCode>
+        <ns2:name>shiqiang.luo@jinjiang.com</ns2:name>
+    </ns2:member>
+    <ns2:memberCouponDto>
+        <couponAmount>0</couponAmount>
+    </ns2:memberCouponDto>
+    <ns2:operator>shiqiang.luo@jinjiang.com</ns2:operator>
+    <ns2:orderOrigin>TERRACE</ns2:orderOrigin>
+    <ns2:planId>16249</ns2:planId>
+    <ns2:prePaid>100</ns2:prePaid>
+    <ns2:remark>809584,811542,809737</ns2:remark>
+    <ns2:roomNum>1</ns2:roomNum>
+</ns2:bookingHotelDto>

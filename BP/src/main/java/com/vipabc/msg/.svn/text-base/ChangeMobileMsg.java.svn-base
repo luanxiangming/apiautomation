@@ -1,0 +1,56 @@
+package com.msg;
+
+import java.sql.SQLException;
+import java.util.Map;
+
+import org.testng.Assert;
+
+import shelper.iffixture.HttpFixture;
+
+import com.utils.ConnectToDB;
+
+public class ChangeMobileMsg {
+	HttpFixture hf ;
+	ConnectToDB mysql;
+	public ChangeMobileMsg()
+	{
+		 hf = new HttpFixture();
+	}
+	public String login(Map<String,String>dataDriven)
+	{
+		hf.addHeaderValue("Content-Type", "application/json");
+		hf.setUrl("http://192.168.1.5:8080/hoss-society/app4/login/agentlogin.do?user_name="+dataDriven.get("userPhone")+"&user_pass=123456");
+		hf.Get();
+		String key = hf.saveParamLeftstrRightstr("key\":\"", "\"}");
+		return key;
+	}
+	public void checkLogin(String key)
+	{
+		hf.setUrl("http://192.168.1.5:8080/hoss-society/app4/account/mycheck.do?key="+ key +"&user_pwd=123456");
+		hf.Get();
+		Assert.assertEquals(hf.getStatus(), 200);
+		Assert.assertEquals(hf.saveParamLeftstrRightstr("status\":\"", "\",\"data"), "1");
+
+	}
+	public String getCode(String key,Map<String,String>dataDriven) throws SQLException
+	{
+		hf.setUrl("http://192.168.1.5:8080/hoss-society/app4/account/mycheck/code.do?key="+ key +"&account_phone="+dataDriven.get("newPhone"));
+		hf.Get();
+		System.out.println("http://192.168.1.5:8080/hoss-society/app4/account/mycheck/code.do?key="+ key +"&account_phone="+dataDriven.get("newPhone"));
+		mysql=new ConnectToDB();
+		String code=mysql.query("identitify_code where phone='"+dataDriven.get("newPhone")+"' order by id desc","code");
+		System.out.println("code="+code);
+		Assert.assertEquals(hf.getStatus(), 200);
+		Assert.assertEquals(hf.saveParamLeftstrRightstr("status\":\"", "\",\"data"), "1");
+		return code;
+	}
+	public void changePhone(String key,String vcode,Map<String,String>dataDriven) throws SQLException
+	{
+		mysql=new ConnectToDB();
+		hf.setUrl("http://192.168.1.5:8080/hoss-society/app4/account/mycheck/phone.do?key="+ key +"&new_phone="+dataDriven.get("newPhone")+"&code="+vcode);
+		hf.Get();
+		Assert.assertEquals(hf.getStatus(), 200);
+		Assert.assertEquals(hf.saveParamLeftstrRightstr("status\":\"", "\",\"data"), "1");
+		mysql.update("update broker set phone= '"+dataDriven.get("userPhone")+"' where phone='"+dataDriven.get("newPhone")+"'");
+	}
+}

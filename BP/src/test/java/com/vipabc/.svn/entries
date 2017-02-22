@@ -1,0 +1,35 @@
+10
+
+dir
+0
+svn://172.16.10.43/hoss-test/bptest/src/test/java/com/vipabc
+svn://172.16.10.43/hoss-test
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+45a0f9ba-3209-45a1-bbe0-ec204b22e02b
+
+test
+dir
+
+
+
+add
+
